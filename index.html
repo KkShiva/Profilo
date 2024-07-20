@@ -70,6 +70,7 @@
                 </span>
                 <span id="typed"></span>
               </h2>
+              <p><a id="downloadBtn" class="btn btn-primary" download>Resume </a></p>
             </div>
           </div>
         </div>
@@ -82,7 +83,14 @@
     <div id="slideIn" class="slide-in"></div>
 
    <!-- Add your content of header -->
-
+       <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.href = './assets/images/resume.pdf';
+            link.download = 'resume.pdf';
+            link.click();
+        });
+    </script>
  <script>
   window.onload = function() {
     var videos = ['./assets/images/Spaceman1.mp4','./assets/images/Spaceman1.mp4','./assets/images/Spaceman1.mp4', './assets/images/city1.mp4', './assets/images/city2.mp4', './assets/images/city3.mp4', './assets/images/city4.mp4']; // Add more video paths if needed
@@ -124,6 +132,16 @@
     </div>
   </nav>
 </header>
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p><i class="fa fa-at" aria-hidden="true"></i><a href="./contact.html" title="">K.shivabalagoud321@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
 
