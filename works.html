@@ -179,7 +179,6 @@
 </div>
 
 
-<div class="content">
 <footer class="footer-container text-center">
   <div class="container">
     <div class="row">
@@ -190,22 +189,8 @@
   </div>
 </footer>
 
-</div>
-<div id="slideIn" class="slide-in"></div>
 
- <script>
-     window.onscroll = function() {
-         // Check if the user has scrolled to the bottom of the content div
-         if ((window.innerHeight + document.querySelector('.content').scrollTop) >= document.querySelector('.content').scrollHeight) {
-             // Add the active class to the slide-in div
-             document.getElementById('slideIn').classList.add('active');
-             // Wait for the transition to complete before redirecting
-             setTimeout(function() {
-                 window.location.href = 'about.html';
-             }, 1000); // Delay matches the CSS transition duration
-         }
-     };
- </script>
+
 <script>
   document.addEventListener("DOMContentLoaded", function (event) {
      navActivePage();
