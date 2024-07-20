@@ -50,6 +50,8 @@
 </header>
 <!-- Add your site or app content here -->
 <!--   <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./assets/images/space2.jpg')">-->
+
+<div class="content">
 <div class="hero-full-container background-image-container white-text-container">
   <div class="hero-full-container">
     <video id="background-video" autoplay muted loop>
@@ -60,11 +62,11 @@
         <div class="col-xs-12">
           <div class="hero-full-wrapper">
             <div class="text-content">
-              <h2>Hello,<br>
+              <h2> Hello,<br>
                 <span id="typed-strings">
-                  <span>I'm Bala Shiva</span>
-                  <span>Game Programmer</span>
-                  <span>Working as a Data Analyst</span>
+                  <span> I'm Bala Shiva</span>
+                  <span> Game Programmer</span>
+                  <span> Working as a Data Analyst</span>
                 </span>
                 <span id="typed"></span>
               </h2>
@@ -75,6 +77,9 @@
     </div>
   </div>
 </div>
+
+  </div>
+    <div id="slideIn" class="slide-in"></div>
 
    <!-- Add your content of header -->
 
@@ -90,6 +95,19 @@
     videoElement.play();
   };
 </script>
+    <script>
+        window.onscroll = function() {
+            // Check if the user has scrolled to the bottom of the content div
+            if ((window.innerHeight + document.querySelector('.content').scrollTop) >= document.querySelector('.content').scrollHeight) {
+                // Add the active class to the slide-in div
+                document.getElementById('slideIn').classList.add('active');
+                // Wait for the transition to complete before redirecting
+                setTimeout(function() {
+                    window.location.href = 'works.html';
+                }, 1000); // Delay matches the CSS transition duration
+            }
+        };
+    </script>
 
 <header>
   <nav class="alert alert-success">
