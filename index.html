@@ -48,6 +48,12 @@
     </div>
   </nav>
 </header>
+
+    <div class="loading-screen" id="loadingScreen">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
 <!-- Add your site or app content here -->
 <!--   <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./assets/images/space2.jpg')">-->
 
@@ -99,7 +105,15 @@
     videoElement.load();
     videoElement.play();
   };
+  
 </script>
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loadingScreen').style.display = 'none';
+            }, 2000);
+        });
+    </script>
     <script>
         window.onscroll = function() {
             // Check if the user has scrolled to the bottom of the content div
